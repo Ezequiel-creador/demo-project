@@ -3,102 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Demo</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <title>Landing App Productiva</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      color: #222;
-    }
-
-    header {
-      background: #1e1e2f;
+      background: linear-gradient(to right, #e52d27, #b31217);
       color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
       padding: 80px 20px;
       text-align: center;
     }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
-
-    header p {
+    .hero p {
       font-size: 1.2rem;
     }
-
-    section {
-      padding: 50px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    form {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    form button {
-      background: #1e1e2f;
+    .btn-whatsapp {
+      background-color: #25D366;
       color: white;
       border: none;
-      padding: 12px 25px;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s ease;
     }
-
-    form button:hover {
-      background: #3a3a5c;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eaeaea;
-      font-size: 0.9rem;
+    .image-section img {
+      max-width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
-  <header data-aos="fade-down">
-    <h1>Tu Marca Profesional</h1>
-    <p>Soluciones digitales personalizadas para tu negocio</p>
-  </header>
 
-  <section data-aos="fade-up">
-    <h2>Contacto</h2>
-    <form>
-      <input type="text" placeholder="Tu nombre" required />
-      <input type="email" placeholder="Tu email" required />
-      <textarea rows="4" placeholder="Mensaje..." required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+  <section class="hero">
+    <div class="container" data-aos="fade-up">
+      <h1>Organizá tu día con nuestra app</h1>
+      <p>Una aplicación simple y potente para que nada se te pase. Controlá tus tareas, recordatorios y metas.</p>
+      <a href="https://wa.me/1234567890" class="btn btn-whatsapp mt-3">Hablá con nosotros</a>
+    </div>
   </section>
 
-  <footer data-aos="fade-up">
-    &copy; 2025 Tu Marca. Todos los derechos reservados.
-  </footer>
+  <section class="image-section container my-5" data-aos="fade-left">
+    <img src="https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=800&q=80" alt="App en celular" />
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
