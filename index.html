@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Demo</title>
+  <title>Landing Demo Mejorada</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body, html {
@@ -11,10 +11,9 @@
       padding: 0;
       height: 100%;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #000000, #ffffff);
-      color: white;
     }
 
+    /* Sección Hero con imagen de fondo */
     .hero {
       background: url('img/photo-1580894908361-967195033215.avif') center center / cover no-repeat;
       height: 100vh;
@@ -28,7 +27,7 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.4); /* oscurece la imagen */
+      background: rgba(0, 0, 0, 0.4); /* Oscurece la imagen */
     }
 
     .hero-content {
@@ -46,57 +45,189 @@
     h1 {
       font-size: 3rem;
       font-weight: bold;
+      color: violet;
     }
 
     p {
       font-size: 1.2rem;
+      color: #fff;
+    }
+
+    /* Estilo de las secciones intercaladas */
+    section {
+      padding: 60px 0;
+    }
+
+    .bg-black-gradient {
+      background: linear-gradient(to right, #000000, #434343);
+      color: white;
+    }
+
+    .bg-white-gradient {
+      background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+      color: black;
+    }
+
+    /* Estilo para los encabezados violetas */
+    h2, h3 {
+      color: violet;
+      font-weight: bold;
+    }
+
+    /* Sección Testimonios */
+    .testimonios {
+      background: linear-gradient(to right, #000000, #1a1a1a);
+      color: white;
+    }
+
+    .testimonial-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .testimonial-icon {
+      color: violet;
+      font-size: 2rem;
+    }
+
+    /* Tarjetas con imágenes y texto al lado */
+    .card-image-text {
+      display: flex;
+      align-items: center;
+      background: #f5f5f5;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .card-image-text img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .btn-violet {
+      background-color: violet;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-violet:hover {
+      background-color: #6a3d9a;
     }
   </style>
 </head>
 <body>
 
+  <!-- Sección Hero -->
   <section class="hero">
     <div class="hero-overlay"></div>
-    <div class="hero-content text-white">
+    <div class="hero-content">
       <h1>Bienvenido a tu nueva web</h1>
       <p>Moderna, rápida y adaptada a cualquier dispositivo</p>
     </div>
   </section>
 
-<section class="testimonios py-5 text-center text-white">
-  <div class="container">
-    <h2 class="mb-5 display-5 fw-bold">Lo que dicen nuestros clientes</h2>
-    <div class="row justify-content-center g-4">
-      
-      <div class="col-md-4">
-        <div class="testimonial-card p-4 rounded-4">
-          <p class="fst-italic">“La página quedó impecable. Todo rápido, claro y con diseño profesional.”</p>
-          <h5 class="mt-3 fw-bold">Mariana G.</h5>
-          <small class="text-muted">CEO, Creativa Studio</small>
+  <!-- Sección de Testimonios -->
+  <section class="testimonios text-center py-5">
+    <div class="container">
+      <h2 class="mb-5">Lo que dicen nuestros clientes</h2>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="fst-italic">“La página quedó impecable. Todo rápido, claro y con diseño profesional.”</p>
+            <h5 class="mt-3">Mariana G.</h5>
+            <small class="text-muted">CEO, Creativa Studio</small>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="fst-italic">“Superó nuestras expectativas. El sitio es rápido y luce increíble en móviles.”</p>
+            <h5 class="mt-3">Lucas P.</h5>
+            <small class="text-muted">Fundador, Fast Logistics</small>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="fst-italic">“Gran experiencia. Entrega rápida, comunicación clara y excelente resultado.”</p>
+            <h5 class="mt-3">Sofía R.</h5>
+            <small class="text-muted">Marketing, BlueTech</small>
+          </div>
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="testimonial-card p-4 rounded-4">
-          <p class="fst-italic">“Superó nuestras expectativas. El sitio es rápido y luce increíble en móviles.”</p>
-          <h5 class="mt-3 fw-bold">Lucas P.</h5>
-          <small class="text-muted">Fundador, Fast Logistics</small>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="testimonial-card p-4 rounded-4">
-          <p class="fst-italic">“Gran experiencia. Entrega rápida, comunicación clara y excelente resultado.”</p>
-          <h5 class="mt-3 fw-bold">Sofía R.</h5>
-          <small class="text-muted">Marketing, BlueTech</small>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-  
+  <!-- Sección con Tarjetas de Imagen y Texto -->
+  <section class="bg-white-gradient text-center py-5">
+    <div class="container">
+      <h2 class="mb-5">Nuestros Proyectos</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card-image-text">
+            <img src="https://via.placeholder.com/200" alt="Proyecto">
+            <div class="card-content">
+              <h3>Proyecto 1</h3>
+              <p>Descripción breve del proyecto, destacando características y beneficios.</p>
+              <button class="btn-violet">Ver más</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card-image-text">
+            <img src="https://via.placeholder.com/200" alt="Proyecto">
+            <div class="card-content">
+              <h3>Proyecto 2</h3>
+              <p>Descripción breve del proyecto, destacando características y beneficios.</p>
+              <button class="btn-violet">Ver más</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section class="bg-black-gradient text-center py-5">
+    <div class="container">
+      <h2 class="mb-5">Contacto</h2>
+      <p>Si tienes alguna pregunta, no dudes en contactarnos.</p>
+      <button class="btn-violet">Contacta con nosotros</button>
+    </div>
+  </section>
+
+  <!-- Cargar iconos FontAwesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
+
 
