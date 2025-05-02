@@ -3,111 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing App Productiva</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <title>Landing Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      background: linear-gradient(to right, #e52d27, #b31217);
-      color: white;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: 'Segoe UI', sans-serif;
-    }
-    .hero {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-    }
-    .btn-whatsapp {
-      background-color: #25D366;
+      background: linear-gradient(to bottom, #000000, #ffffff);
       color: white;
-      border: none;
     }
-    .image-section img {
-      max-width: 100%;
-      border-radius: 1rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+    .hero {
+      background: url('img/hero.jpg') center center / cover no-repeat;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* oscurece la imagen */
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      z-index: 1;
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.2rem;
     }
   </style>
 </head>
 <body>
 
   <section class="hero">
-    <div class="container" data-aos="fade-up">
-      <h1>Organizá tu día con nuestra app</h1>
-      <p>Una aplicación simple y potente para que nada se te pase. Controlá tus tareas, recordatorios y metas.</p>
-      <a href="https://wa.me/1234567890" class="btn btn-whatsapp mt-3">Hablá con nosotros</a>
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-white">
+      <h1>Bienvenido a tu nueva web</h1>
+      <p>Moderna, rápida y adaptada a cualquier dispositivo</p>
     </div>
   </section>
 
-  <section class="image-section container my-5" data-aos="fade-left">
-    <img src="https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=800&q=80" alt="App en celular" />
-  </section>
-
-  <!-- Testimonios -->
-<section class="bg-light text-dark py-5" data-aos="fade-up">
+<section class="testimonios py-5 text-center text-white">
   <div class="container">
-    <h2 class="text-center mb-4">Lo que dicen nuestros usuarios</h2>
-    <div class="row">
+    <h2 class="mb-5 display-5 fw-bold">Lo que dicen nuestros clientes</h2>
+    <div class="row justify-content-center g-4">
+      
       <div class="col-md-4">
-        <blockquote class="blockquote">
-          <p>"Desde que uso esta app, soy más organizado y productivo. ¡Me encanta!"</p>
-          <footer class="blockquote-footer">Juan Pérez</footer>
-        </blockquote>
+        <div class="testimonial-card p-4 rounded-4">
+          <p class="fst-italic">“La página quedó impecable. Todo rápido, claro y con diseño profesional.”</p>
+          <h5 class="mt-3 fw-bold">Mariana G.</h5>
+          <small class="text-muted">CEO, Creativa Studio</small>
+        </div>
       </div>
+
       <div class="col-md-4">
-        <blockquote class="blockquote">
-          <p>"Fácil de usar y muy útil. Tiene justo lo que necesito."</p>
-          <footer class="blockquote-footer">Carla Martínez</footer>
-        </blockquote>
+        <div class="testimonial-card p-4 rounded-4">
+          <p class="fst-italic">“Superó nuestras expectativas. El sitio es rápido y luce increíble en móviles.”</p>
+          <h5 class="mt-3 fw-bold">Lucas P.</h5>
+          <small class="text-muted">Fundador, Fast Logistics</small>
+        </div>
       </div>
+
       <div class="col-md-4">
-        <blockquote class="blockquote">
-          <p>"Excelente diseño y funciona perfecto. Recomendadísima."</p>
-          <footer class="blockquote-footer">Luis Gómez</footer>
-        </blockquote>
+        <div class="testimonial-card p-4 rounded-4">
+          <p class="fst-italic">“Gran experiencia. Entrega rápida, comunicación clara y excelente resultado.”</p>
+          <h5 class="mt-3 fw-bold">Sofía R.</h5>
+          <small class="text-muted">Marketing, BlueTech</small>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- Precios -->
-<section class="py-5" data-aos="zoom-in">
-  <div class="container text-center">
-    <h2 class="mb-4">Planes</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-4">
-        <div class="card bg-dark text-white">
-          <div class="card-body">
-            <h5 class="card-title">Plan Básico</h5>
-            <p class="card-text">$0/mes - Funciones limitadas</p>
-            <a href="#" class="btn btn-light">Empezar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mt-4 mt-md-0">
-        <div class="card bg-danger text-white">
-          <div class="card-body">
-            <h5 class="card-title">Plan Pro</h5>
-            <p class="card-text">$9.99/mes - Todas las funciones</p>
-            <a href="#" class="btn btn-light">Elegir</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  
 </body>
 </html>
+
