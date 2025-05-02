@@ -73,21 +73,28 @@ form button {
 }
 
 .testimonials {
-  background-color: #fff;
+  background-image: url('img\pexels-alex-green-5699868.jpg');
+  background-size: cover;
+  background-position: center;
   padding: 50px 20px;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  text-align: center;
 }
 
 .testimonial-card {
-  background-color: #f0f0f0;
+  background: linear-gradient(to bottom, #000000, #333333);
+  color: white;
   padding: 20px;
-  border-radius: 8px;
+  margin: 10px;
   width: 200px;
+  transition: transform 0.3s;
 }
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+
 
 .mentor-section {
   display: flex;
