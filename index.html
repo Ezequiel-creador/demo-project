@@ -68,19 +68,29 @@
     }
 
     .card-custom {
-      background-color: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .card-custom:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     }
 
     .icon {
       font-size: 2rem;
       color: #8e44ad;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-control {
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -169,6 +179,21 @@
           <p>Descubre cómo nuestras estrategias de marketing pueden llevar tu negocio al siguiente nivel.</p>
           <button class="btn btn-violet mt-3">REGISTRARME</button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section class="section-black py-5 text-center">
+    <div class="container">
+      <h2 class="mb-5">Contáctanos</h2>
+      <div class="contact-form">
+        <form>
+          <input type="text" class="form-control" placeholder="Nombre" required>
+          <input type="email" class="form-control" placeholder="Correo electrónico" required>
+          <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+          <button type="submit" class="btn btn-violet mt-3">Enviar Mensaje</button>
+        </form>
       </div>
     </div>
   </section>
