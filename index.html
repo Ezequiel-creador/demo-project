@@ -1,113 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page - Marketing Digital</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing de Ezequiel</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Sección 1: Hero con formulario -->
-  <section class="hero">
-    <div class="overlay">
-      <h1>Regístrate Gratis</h1>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Aprende a Programar con Ezequiel</h1>
+      <p>Curso intensivo de desarrollo web. ¡Inscríbete gratis!</p>
       <form>
-        <input type="email" placeholder="Tu correo electrónico" required>
-        <button type="submit">Registrarse</button>
+        <label for="email" class="sr-only">Correo electrónico</label>
+        <input id="email" type="email" placeholder="Tu correo electrónico" required />
+        <button type="submit">Comenzar</button>
       </form>
     </div>
+  </header>
+
+  <section class="features">
+    <h2>¿Qué aprenderás?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>HTML & CSS</h3>
+        <p>Domina la base de la web desde cero.</p>
+      </div>
+      <div class="card">
+        <h3>JavaScript</h3>
+        <p>Haz tus sitios interactivos y dinámicos.</p>
+      </div>
+      <div class="card">
+        <h3>Proyectos reales</h3>
+        <p>Construye tu portafolio desde el día uno.</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Sección 2: Cards -->
-<section class="cards-section">
-  <h2 class="section-title">💡 Nuestros Servicios</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="img/pexels-mikhail-nilov-9304683.jpg" alt="Servicio 1">
-      <div class="card-text">
-        <h3>Estrategia Personalizada</h3>
-        <p>Analizamos tu marca y diseñamos un plan estratégico para posicionarla de forma efectiva en el mercado digital.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="img/pexels-fotios-photos-1092671.jpg" alt="Servicio 2">
-      <div class="card-text">
-        <h3>Publicidad en Redes</h3>
-        <p>Gestionamos campañas en redes sociales como Instagram, Facebook y TikTok, optimizando cada anuncio para conversiones reales.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="img/pexels-fauxels-3183170.jpg" alt="Servicio 3">
-      <div class="card-text">
-        <h3>Optimización de Ventas</h3>
-        <p>Mejoramos tu embudo de ventas y experiencia de usuario para lograr más ventas con menos inversión publicitaria.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-  <!-- Sección 3: Testimonios -->
   <section class="testimonials">
-    <div class="testimonial-card">
-      <i>⭐</i>
-      <p>"Duplicamos nuestras ventas en 2 meses."</p>
-    </div>
-    <div class="testimonial-card">
-      <i>💬</i>
-      <p>"El mejor mentor que hemos tenido."</p>
-    </div>
-    <div class="testimonial-card">
-      <i>🚀</i>
-      <p>"Crecimos más rápido de lo esperado."</p>
-    </div>
-    <div class="testimonial-card">
-      <i>🔥</i>
-      <p>"Resultados concretos y seguimiento constante."</p>
-    </div>
+    <h2>Testimonios</h2>
+    <p>"Gracias al curso de Ezequiel, hoy trabajo como desarrollador frontend."</p>
+    <p>- Juan Pérez</p>
   </section>
 
-  <!-- Sección 4: Mentor -->
   <section class="mentor-section">
-    <img src="img/vecteezy_portrait-of-happy-multi-ethnic-business-couple-illustration_24344056.png" alt="Mentor">
-    <div class="mentor-text">
-      <h2>Conoce a tu Mentor</h2>
-      <p>Con más de 10 años de experiencia ayudando a emprendedores a crecer online, nuestro mentor ha acompañado a cientos de marcas a escalar sus ventas.</p>
-    </div>
+    <h2>Tu Mentor</h2>
+    <img src="https://via.placeholder.com/150" alt="Foto de Ezequiel" />
+    <p>Hola, soy Ezequiel. Programador y mentor con años de experiencia ayudando a personas como tú a entrar al mundo IT.</p>
   </section>
 
-  <!-- Sección 5: Cuenta regresiva -->
   <section class="countdown">
-    <h2>⏳ ¡Apresúrate! La inscripción cierra en:</h2>
-    <div id="timer">00:00:00</div>
+    <h2>¡Inscripciones cierran en:</h2>
+    <div id="timer">00d 00h 00m 00s</div>
   </section>
 
-  <!-- Script del contador -->
+  <footer>
+    <p>© 2025 Ezequiel Dev Academy</p>
+  </footer>
+
   <script>
-    const deadline = new Date("May 10, 2025 23:59:59").getTime();
-
-    const x = setInterval(function() {
+    const countdown = () => {
+      const end = new Date("May 10, 2025 23:59:59").getTime();
       const now = new Date().getTime();
-      const t = deadline - now;
+      const t = end - now;
 
-      const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((t % (1000 * 60)) / 1000);
+      if (t >= 0) {
+        const days = Math.floor(t / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((t % (1000 * 60)) / 1000);
 
-      document.getElementById("timer").innerHTML = 
-        (hours < 10 ? "0" + hours : hours) + ":" +
-        (minutes < 10 ? "0" + minutes : minutes) + ":" +
-        (seconds < 10 ? "0" + seconds : seconds);
-
-      if (t < 0) {
-        clearInterval(x);
-        document.getElementById("timer").innerHTML = "¡Inscripción cerrada!";
+        document.getElementById("timer").innerHTML =
+          (days < 10 ? "0" + days : days) + "d " +
+          (hours < 10 ? "0" + hours : hours) + "h " +
+          (minutes < 10 ? "0" + minutes : minutes) + "m " +
+          (seconds < 10 ? "0" + seconds : seconds) + "s";
       }
-    }, 1000);
+    };
+    setInterval(countdown, 1000);
   </script>
 
 </body>
 </html>
+
 
