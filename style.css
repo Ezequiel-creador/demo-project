@@ -1,9 +1,9 @@
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  color: #333;
+  font-weight: 600; /* Más gruesa que normal (400) */
+  margin: 0;
+  padding: 0;
 }
-
 .hero {
   background: url('img/teleworker-doing-research-analysis-startup-organization.jpg') center/cover no-repeat;
   height: 100vh;
@@ -46,24 +46,40 @@ form button {
 
 .cards-section {
   padding: 50px 20px;
-  background-color: #f9f9f9;
+  background: linear-gradient(to bottom, #ffffff, #f1f1f1);
   text-align: center;
 }
 
+.section-title {
+  font-size: 2rem;
+  color: #6A0DAD; /* Violeta */
+  margin-bottom: 30px;
+}
+
+/* Contenedor de tarjetas en columna */
 .cards {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Una debajo de otra */
+  align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
   margin-top: 30px;
 }
 
+/* Tarjeta individual */
 .card {
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   padding: 20px;
-  width: 250px;
+  width: 90%;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
 }
 
 .card img {
@@ -71,7 +87,6 @@ form button {
   border-radius: 8px;
   margin-bottom: 15px;
 }
-
 .testimonials {
   background-image: url('img/pexels-olly-3769021.jpg');
   background-size: cover;
