@@ -1,185 +1,111 @@
 body {
-  font-family: Arial, sans-serif;
-  font-weight: 600; /* Más gruesa que normal (400) */
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #333;
 }
+
 .hero {
-  background: url('img/teleworker-doing-research-analysis-startup-organization.jpg') center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  text-align: center;
+  background: #004aad;
   color: white;
-  border-radius: 10px;
+  padding: 80px 20px;
+  text-align: center;
 }
 
-.overlay h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+.hero-content h1 {
+  font-size: 2.5rem;
 }
 
-form input[type="email"] {
+form {
+  margin-top: 20px;
+}
+
+form input {
   padding: 10px;
-  font-size: 1em;
+  width: 250px;
   border: none;
   border-radius: 5px;
-  margin-right: 10px;
 }
 
 form button {
   padding: 10px 20px;
-  font-size: 1em;
+  margin-left: 10px;
   border: none;
-  background-color: #f90;
+  background: #ffaa00;
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  font-weight: 600;
-  margin: 0;
-  padding: 0;
+form button:hover {
+  background-color: #ffae00;
+  transform: scale(1.05);
 }
 
-.cards-section {
-  padding: 50px 20px;
-  background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+.features {
+  padding: 60px 20px;
   text-align: center;
-}
-
-.section-title {
-  font-size: 2rem;
-  color: #6A0DAD;
-  margin-bottom: 40px;
 }
 
 .cards {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* Card horizontal */
 .card {
-  display: flex;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 800px;
-  width: 100%;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.card img {
-  width: 40%;
-  object-fit: cover;
-}
-
-.card-text {
+  background: #f4f4f4;
   padding: 20px;
-  text-align: left;
-  width: 60%;
-}
-
-.card-text h3 {
-  color: #6A0DAD;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.card-text p {
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-/* Responsivo para móviles */
-@media (max-width: 768px) {
-  .card {
-    flex-direction: column;
-  }
-
-  .card img, .card-text {
-    width: 100%;
-  }
-
-  .card-text {
-    text-align: center;
-  }
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .testimonials {
-  background-image: url('img/pexels-olly-3769021.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 50px 20px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  background: #eee;
+  padding: 60px 20px;
+  text-align: center;
 }
-
-.testimonial-card {
-  background: linear-gradient(to bottom, #000000, #333333);
-  color: white;
-  padding: 20px;
-  margin: 10px;
-  width: 200px;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.testimonial-card:hover {
-  transform: scale(1.05);
-}
-
 
 .mentor-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 20px;
-  gap: 30px;
-  flex-wrap: wrap;
-  background-color: #eef;
+  text-align: center;
+  padding: 60px 20px;
 }
 
 .mentor-section img {
-  max-width: 300px;
-  border-radius: 10px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
-.mentor-text {
-  max-width: 400px;
+.mentor-section img:hover {
+  transform: scale(1.05);
 }
 
 .countdown {
-  background-color: #222;
+  background: #004aad;
   color: white;
   text-align: center;
   padding: 40px 20px;
+  font-size: 1.5rem;
 }
 
-#timer {
-  font-size: 2em;
-  margin-top: 10px;
-  font-weight: bold;
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-
-  
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
