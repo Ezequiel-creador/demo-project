@@ -88,6 +88,7 @@ form button {
   padding: 20px;
   margin: 10px;
   width: 200px;
+  border-radius: 8px;
   transition: transform 0.3s;
 }
 
