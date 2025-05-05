@@ -5,45 +5,66 @@
   margin: 0;
   padding: 0;
 }
+
 .hero {
-  background: url('img/teleworker-doing-research-analysis-startup-organization.jpg') center/cover no-repeat;
+  background: url('img\Diseño-sin-título.png') center/cover no-repeat;
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+   }
+
+.hero-overlay {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Alinea el contenido a la derecha */
+  align-items: center;
+  padding: 0 50px; /* Espaciado interno */
+  background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo */
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  text-align: center;
+.hero-text {
+  /* Asegura que el texto esté sobre la imagen y el gradiente */
+  max-width: 50%;
   color: white;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero-subtitle {
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #7b2ff7, #f107a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.overlay h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+.hero-description {
+  font-size: 1.5rem;
 }
 
+form input[type="text"],
+form input[type="tel"],
 form input[type="email"] {
-  padding: 10px;
-  font-size: 1em;
+  padding: 8px;
+  font-size: 0.9em;
   border: none;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-bottom: 8px; /* Espaciado entre campos */
+  width: 60%;
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Asegura que los campos ocupen todo el ancho */
 }
 
 form button {
-  padding: 10px 20px;
-  font-size: 1em;
+  padding: 8px 16px;
+  font-size: 0.9em;
   border: none;
   background-color: #f90;
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  width: 60%; /* Botón del mismo ancho que los campos */
 }
+
 
 body {
   font-family: Arial, sans-serif;
@@ -60,8 +81,11 @@ body {
 
 .section-title {
   font-size: 2rem;
-  color: #6A0DAD;
+  background: linear-gradient(45deg, #7b2ff7, #f107a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .cards {
@@ -100,7 +124,10 @@ body {
 }
 
 .card-text h3 {
-  color: #6A0DAD;
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, #7b2ff7, #f107a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -112,6 +139,30 @@ body {
 
 /* Responsivo para móviles */
 @media (max-width: 768px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-overlay {
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 20px; /* Reduce el padding */
+  }
+
+  .hero-text {
+    max-width: 90%; /* Asegura que el contenido no ocupe todo el ancho */
+    text-align: center; /* Centra el texto */
+  }
+
+  form input[type="text"],
+  form input[type="tel"],
+  form input[type="email"],
+  form button {
+    width: 100%; /* Asegura que los campos ocupen todo el ancho */
+  }
   .card {
     flex-direction: column;
   }
@@ -126,13 +177,30 @@ body {
 }
 
 .testimonials {
-  background-image: url('img/pexels-olly-3769021.jpg');
+  background-image: url('img\Diseño-sin-título.png');
   background-size: cover;
   background-position: center;
-  padding: 50px 20px;
+  padding: 100px 20px; /* Aumentado el alto */
   display: flex;
-  justify-content: space-around;
+  flex-direction: column; /* Cambiado para alinear el título y las cards */
+  align-items: center;
+  gap: 30px;
+}
+
+.testimonials-title {
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #7b2ff7, #f107a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.testimonial-cards-container {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .testimonial-card {
@@ -143,6 +211,7 @@ body {
   width: 200px;
   border-radius: 8px;
   transition: transform 0.3s;
+  text-align: center;
 }
 
 .testimonial-card:hover {

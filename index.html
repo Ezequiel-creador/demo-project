@@ -1,4 +1,20 @@
 <!DOCTYPE html>
+<style>
+  .register-button {
+    background: linear-gradient(45deg, #7b2ff7, #f107a3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .register-button:hover {
+    opacity: 0.9;
+  }
+</style>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -10,12 +26,18 @@
 
   <!-- Sección 1: Hero con formulario -->
   <section class="hero">
-    <div class="overlay">
-      <h1>Regístrate Gratis</h1>
-      <form>
-        <input type="email" placeholder="Tu correo electrónico" required>
-        <button type="submit">Registrarse</button>
-      </form>
+    <div class="hero-overlay">
+      <!-- Mitad derecha: Texto y formulario -->
+      <div class="hero-text">
+        <h2 class="hero-subtitle">Transforma tu negocio con estrategias digitales</h2>
+        <h3 class="hero-description">Únete a cientos de emprendedores que ya están creciendo online.</h3>
+        <form>
+          <input type="text" placeholder="Tu nombre" required>
+          <input type="tel" placeholder="Tu teléfono" required>
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button class="register-button" type="submit">Registrarse</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -42,8 +64,9 @@
       <div class="card-text">
         <h3>Optimización de Ventas</h3>
         <p>Mejoramos tu embudo de ventas y experiencia de usuario para lograr más ventas con menos inversión publicitaria.</p>
-      </div>
+        </div>
     </div>
+    <button class="register-button" onclick="scrollToForm()">Regístrate</button>
   </div>
 </section>
 
@@ -51,6 +74,8 @@
 
   <!-- Sección 3: Testimonios -->
   <section class="testimonials">
+    <h2 class="section-title testimonials-title">💬 Testimonios de Nuestros Clientes</h2>
+    <div class="testimonial-cards-container">
     <div class="testimonial-card">
       <i>⭐</i>
       <p>"Duplicamos nuestras ventas en 2 meses."</p>
@@ -67,6 +92,8 @@
       <i>🔥</i>
       <p>"Resultados concretos y seguimiento constante."</p>
     </div>
+    </div>
+    <button class="register-button" onclick="scrollToForm()">Regístrate</button>
   </section>
 
   <!-- Sección 4: Mentor -->
@@ -75,6 +102,7 @@
     <div class="mentor-text">
       <h2>Conoce a tu Mentor</h2>
       <p>Con más de 10 años de experiencia ayudando a emprendedores a crecer online, nuestro mentor ha acompañado a cientos de marcas a escalar sus ventas.</p>
+      <button class="register-button" onclick="scrollToForm()">Regístrate</button>
     </div>
   </section>
 
@@ -82,6 +110,8 @@
   <section class="countdown">
     <h2>⏳ ¡Apresúrate! La inscripción cierra en:</h2>
     <div id="timer">00:00:00</div>
+    <p>¡No pierdas la oportunidad de transformar tu negocio!</p>
+    <button class="register-button" onclick="scrollToForm()">Regístrate</button>
   </section>
 
   <!-- Script del contador -->
