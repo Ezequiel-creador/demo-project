@@ -7,7 +7,7 @@
 }
 
 .hero {
-  background: url('img/teleworker-doing-research-analysis-startup-organization.jpg') center/cover no-repeat;
+  background: url('img/heroopia.JPG') center/cover no-repeat;
   height: 100vh;
   display: flex;
   position: relative;
@@ -177,7 +177,7 @@ body {
 }
 
 .testimonials {
-  background-image: url('img/Diseño-sin-título(1).png');
+  background-image: url('img/testimoniosfinal.JPG');
   background-size: cover;
   background-position: center;
   padding: 100px 20px; /* Aumentado el alto */
