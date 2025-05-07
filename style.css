@@ -164,6 +164,16 @@ body {
   line-height: 1.5;
 }
 
+@media (max-width: 350px) {
+   .testimonials h2 {
+    font-size: 1rem; /* Ajusta el tamaño de los encabezados h2 */
+  }
+  .hero-subtitle {
+    font-size: 1rem; /* Reduce el tamaño de los encabezados h1 */
+    margin-bottom: 10px;
+  }
+}
+
 /* Responsivo para móviles */
 @media (max-width: 850px) {
   .testimonials h2 {
