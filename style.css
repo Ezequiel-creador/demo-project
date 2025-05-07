@@ -166,12 +166,12 @@ body {
 
 @media (max-width: 296px) {
   .hero-text h3 {
-    font-size: 1.2rem; /* Reduce el tamaño del encabezado */
+    font-size: 1rem; /* Reduce el tamaño del encabezado */
   }
 
 
   .hero-subtitle {
-    font-size: 1.5rem; /* Reduce el tamaño del subtítulo */
+    font-size: 1rem; /* Reduce el tamaño del subtítulo */
     line-height: 1.2;
   }
 
