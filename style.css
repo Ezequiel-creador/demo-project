@@ -164,13 +164,24 @@ body {
   line-height: 1.5;
 }
 
-@media (max-width: 350px) {
-   .testimonials h2 {
-    font-size: 1rem; /* Ajusta el tamaño de los encabezados h2 */
+@media (max-width: 296px) {
+  .hero-text h3 {
+    font-size: 1.2rem; /* Reduce el tamaño del encabezado */
   }
+
   .hero-subtitle {
-    font-size: 1rem; /* Reduce el tamaño de los encabezados h1 */
-    margin-bottom: 10px;
+    font-size: 1.5rem; /* Reduce el tamaño del subtítulo */
+  }
+
+  .hero-description {
+    font-size: 1rem; /* Reduce el tamaño de la descripción */
+  }
+
+  form input[type="text"],
+  form input[type="tel"],
+  form input[type="email"],
+  form button {
+    font-size: 0.8rem; /* Reduce el tamaño del texto en los campos y el botón */
   }
 }
 
