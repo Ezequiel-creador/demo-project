@@ -1,5 +1,4 @@
-
- body {
+body {
   font-family: Arial, sans-serif;
   font-weight: 600; /* Más gruesa que normal (400) */
   margin: 0;
@@ -7,7 +6,8 @@
 }
 
 .hero {
-  background: url('img/herioopia.JPG') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('img/herioopia.JPG') center/cover no-repeat;
   height: 100vh;
   display: flex;
   position: relative;
@@ -22,6 +22,13 @@
   background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo */
 }
 
+.hero-text form {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos del formulario en columna */
+  align-items: right; /* Centra los elementos horizontalmente */
+  gap: 2px; /* Espacio entre los campos */
+}
+
 .hero-text {
   /* Asegura que el texto esté sobre la imagen y el gradiente */
   max-width: 50%;
@@ -29,7 +36,17 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow: hidden; /* Evita que el contenido se salga del contenedor */
+  word-wrap: break-word;
+  
 }
+
+.hero-text h3 {
+  font-size: 2rem; /* Ajusta el tamaño del encabezado */
+  margin: 0; /* Elimina márgenes adicionales */
+  text-align: left; /* Centra el texto dentro del contenedor */
+}
+
 .hero-subtitle {
   font-size: 2.5rem;
   background: linear-gradient(45deg, #7b2ff7, #f107a3);
@@ -43,27 +60,37 @@
 
 form input[type="text"],
 form input[type="tel"],
-form input[type="email"] {
-  padding: 8px;
-  font-size: 0.9em;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 8px; /* Espaciado entre campos */
-  width: 60%;
-  background-color: #000; /* Fondo negro */
-  color: #fff; /* Asegura que los campos ocupen todo el ancho */
+form input[type="email"],
+form button {
+  width: 60%; /* Ajusta el ancho */
+  font-size: 0.9em; /* Ajusta el tamaño del texto */
+  padding: 8px; /* Espaciado interno */
+  border: 2px solid; /* Define el grosor del borde */
+  border-image: linear-gradient(45deg, #7b2ff7, #f107a3) 1; /* Degradado violeta */
+  border-radius: 5px; /* Bordes redondeados */
+  outline: none; /* Elimina el borde azul al hacer clic */
+  background-color: #000; 
+  color: white; 
+  box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="tel"]:focus,
+form input[type="email"]:focus {
+  border-color: #f107a3; /* Cambia el color del borde al enfocarse */
+  box-shadow: 0 0 5px rgba(123, 47, 247, 0.5); /* Agrega un brillo */
+  background-color: rgba(123, 47, 247, 0.1); /* Cambia ligeramente el fondo */
 }
 
 form button {
-  padding: 8px 16px;
-  font-size: 0.9em;
-  border: none;
-  background-color: #f90;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 60%; /* Botón del mismo ancho que los campos */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Animación al pasar el cursor */
 }
+
+form button:hover {
+  background-color: #7b2ff7; /* Cambia el color al pasar el cursor */
+}
+
 
 
 body {
@@ -139,22 +166,44 @@ body {
 
 /* Responsivo para móviles */
 @media (max-width: 768px) {
+  .testimonials h2 {
+    font-size: 2rem; /* Ajusta el tamaño de los encabezados h2 */
+  }
+  .hero-subtitle {
+    font-size: 2rem; /* Reduce el tamaño de los encabezados h1 */
+    margin-bottom: 10px;
+  }
+
+  .hero-text h3 {
+    font-size: 1.5rem; /* Reduce el tamaño de los encabezados h1 */
+    text-align: center;
+    margin-bottom:10px ;
+  }
+
   .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px; /* Añade espacio interno */
   }
 
   .hero-overlay {
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    padding: 20px; /* Reduce el padding */
+    width: 100%; /* Asegura que el contenido ocupe todo el ancho */
+    display: flex;
+    flex-direction: column; /* Alinea la imagen y el formulario verticalmente */
+    align-items: center; /* Centra los elementos */
+    gap: 5px; /* Espacio entre la imagen y el formulario */
+    background: none; /* Elimina el fondo transparente */
+    padding: 10px;
   }
 
   .hero-text {
     max-width: 90%; /* Asegura que el contenido no ocupe todo el ancho */
     text-align: center; /* Centra el texto */
+    font-size: 1.2rem; /* Ajusta el tamaño del texto */
+    gap: 0.5px; /* Reduce el espacio entre elementos */
+    margin-top: 10px;
   }
 
   form input[type="text"],
@@ -162,28 +211,84 @@ body {
   form input[type="email"],
   form button {
     width: 100%; /* Asegura que los campos ocupen todo el ancho */
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    margin-bottom: 2px; /* Espaciado entre campos */
+   
   }
+
+  form button {
+    padding: 10px; /* Ajusta el tamaño del botón */
+  }
+  
+  .card-text h3 {
+    padding: 2px; /* Agrega padding superior e inferior al encabezado */
+  }
+
+  .card-text p {
+    padding: 2px; /* Agrega padding alrededor del texto */
+  }
+
   .card {
     flex-direction: column;
+    align-items: center;
   }
 
   .card img, .card-text {
     width: 100%;
+    object-fit: cover;
   }
 
   .card-text {
     text-align: center;
+    padding: 15px;
   }
+
+  .testimonials {
+   padding-top: 1px;
+    padding-bottom: 1px; /* Reduce el alto */
+    margin-top: 1px;
+    margin-bottom: 1px; /* Reduce el padding superior e inferior */
+  }
+
  .testimonial-card {
-  font-size: 1rem; 
+  font-size: 0.9rem; 
+  padding: 15px; /* Ajusta el espacio interno */
+  width: 100%; /* Asegura que las tarjetas ocupen todo el ancho */
  }
+
+ .testimonial-card h3 {
+  font-size: 1.2rem; /* Ajusta el tamaño del encabezado dentro de las tarjetas */
+  margin-bottom: 10px; /* Añade espacio debajo del encabezado */
+}
+
+.testimonial-card p {
+  font-size: 0.9rem; /* Ajusta el tamaño del texto */
+  line-height: 1.4; /* Mejora la legibilidad */
+}
+
+.testimonial-cards-container {
+  gap: 15px; /* Reduce el espacio entre las tarjetas */
+}
+
+.mentor-section .register-button {
+  display: block; /* Asegura que el botón sea un bloque */
+  margin: 20px auto; /* Centra el botón horizontalmente */
+  text-align: center;
+}
+
+.mentor-text {
+  text-align: center; /* Centra el texto y el encabezado */
+  margin: 0 auto; /* Asegura que el contenedor esté centrado */
+}
+
+
 }
 
 .testimonials {
   background-image: url('img/testimoniosfinal.JPG');
   background-size: cover;
   background-position: center;
-  padding: 100px 20px; /* Aumentado el alto */
+  padding: 50px 15px; /* Aumentado el alto */
   display: flex;
   flex-direction: column; /* Cambiado para alinear el título y las cards */
   align-items: center;
@@ -254,3 +359,5 @@ body {
   font-weight: bold;
 }
 
+
+ 
