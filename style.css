@@ -311,6 +311,9 @@ body {
   text-align: center; /* Centra el texto y el encabezado */
   margin: 0 auto; /* Asegura que el contenedor esté centrado */
 }
+  .section-title {
+  margin-top: 2px; /* Reduce el espacio superior de los títulos */
+}
 
 
 }
