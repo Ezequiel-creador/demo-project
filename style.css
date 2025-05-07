@@ -193,7 +193,7 @@ body {
     display: flex;
     flex-direction: column; /* Alinea la imagen y el formulario verticalmente */
     align-items: center; /* Centra los elementos */
-    gap: 5px; /* Espacio entre la imagen y el formulario */
+    gap: 1px; /* Espacio entre la imagen y el formulario */
     background: none; /* Elimina el fondo transparente */
     padding: 10px;
   }
