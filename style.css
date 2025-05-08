@@ -168,7 +168,7 @@ body {
     font-size: 0.5rem; /* Reduce el tamaño del encabezado */
   }
   .hero-subtitle {
-    font-size: 1rem; /* Reduce el tamaño del subtítulo */
+    font-size: 0.6rem; /* Reduce el tamaño del subtítulo */
     line-height: 1.2;
   }
 
