@@ -284,7 +284,7 @@ body {
 
  .testimonial-card {
   font-size: 0.9rem; 
-  padding: 15px; /* Ajusta el espacio interno */
+  padding: 14px; /* Ajusta el espacio interno */
   width: 100%; /* Asegura que las tarjetas ocupen todo el ancho */
  }
 
