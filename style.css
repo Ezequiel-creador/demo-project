@@ -190,7 +190,8 @@ body {
 /* Responsivo para móviles */
 @media (max-width: 850px) {
   .testimonials h2 {
-    font-size: 1.5rem; /* Ajusta el tamaño de los encabezados h2 */
+    font-size: 1rem; /* Ajusta el tamaño de los encabezados h2 */
+    margin: 0;
   }
   .hero-subtitle {
     font-size: 1.5rem; /* Reduce el tamaño de los encabezados h1 */
