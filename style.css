@@ -164,14 +164,16 @@ body {
 }
 
 @media (max-width: 296px) {
-   .hero-text h3 {
+   .hero {
+    margin-top: -20px;
+  }
+  .hero-text h3 {
     font-size: 0.5rem; /* Reduce el tamaño del encabezado */
   }
   .hero-subtitle {
     font-size: 0.6rem; /* Reduce el tamaño del subtítulo */
     line-height: 1.2;
   }
-
 
   form input[type="text"],
   form input[type="tel"],
