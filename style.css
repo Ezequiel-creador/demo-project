@@ -181,6 +181,10 @@ body {
   form button {
     font-size: 0.8rem; /* Reduce el tamaño del texto en los campos y el botón */
   }
+
+  .testimonials {
+   margin-top: -20px; /* Sube toda la sección hacia arriba */
+ }
 }
 
 /* Responsivo para móviles */
