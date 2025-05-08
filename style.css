@@ -175,7 +175,7 @@ body {
   }
 
   .hero-description {
-    font-size: 1rem; /* Reduce el tamaño de la descripción */
+    font-size: 0.9rem; /* Reduce el tamaño de la descripción */
   }
 
   form input[type="text"],
