@@ -111,6 +111,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 40px;
+  margin-top:-5px;
   text-align: center;
 }
 
